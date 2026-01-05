@@ -1,0 +1,14 @@
+kind: API
+apiVersion: api.ibm.com/v1
+metadata:
+  name: order-status-api
+  namespace: orders-api
+  version: '1'
+  tags:
+    - NanoGW
+  type: REST
+spec:
+  api-spec:
+    $path: ./order-status-api-spec.yml
+  policy-sequence:
+    - $ref: orders-api:policy-sequence:1

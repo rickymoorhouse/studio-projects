@@ -1,0 +1,18 @@
+kind: Invoke
+apiVersion: api.ibm.com/v1
+metadata:
+  name: invoke-policy-sequence
+  namespace: orders-api
+  version: '1.0'
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  endpoint:
+    http:
+      target:
+        timeout: 30
+        url: >-
+          https://sample-api.v12-preview.apiconnect.test.automation.ibm.com/orders/order/123
+      verb: CUSTOM

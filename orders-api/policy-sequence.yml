@@ -1,0 +1,13 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: policy-sequence
+  namespace: orders-api
+  version: '1'
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  main:
+    - $ref: orders-api:invoke-policy-sequence:1.0

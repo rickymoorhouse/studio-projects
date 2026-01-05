@@ -1,0 +1,41 @@
+openapi: 3.0.4
+info:
+  title: order-status-api-nano
+  description: A service that returns the status of an order under fulfilment.
+  termsOfService: https://ibm.com/terms/
+  contact:
+    name: Aaron Lieber
+    url: www.ibm.com
+    email: api-connect@ibm.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: '1'
+externalDocs:
+  description: Find out more about IBM DataPower Nano Gateway
+  url: https://ibm.com
+servers:
+  - url: https://sample-api.v12-preview.apiconnect.test.automation.ibm.com/health
+tags:
+  - name: order-status
+    description: Everything about IBM DataPower Nano Gateway
+    externalDocs:
+      description: Find out more
+      url: www.ibm.com
+paths:
+  /:
+    get:
+      tags:
+        - order-status
+      summary: A resource that returns the status of an order under fulfilment.
+      description: Returns the status of an order.
+      operationId: status
+      responses:
+        '200':
+          description: ok
+          content:
+            text/plain:
+              schema:
+                type: string
+                format: binary
+                example: ok
