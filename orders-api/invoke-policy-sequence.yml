@@ -15,4 +15,12 @@ spec:
         timeout: 30
         url: >-
           https://sample-api.v12-preview.apiconnect.test.automation.ibm.com/orders/order/123
-      verb: CUSTOM
+        tlsClientProfile: tls-client-profile-catalog-default
+        urlType: plain
+      verb: GET
+  cache:
+    expire:
+      static:
+        seconds: 0
+    scope:
+      narrowScope: {}
