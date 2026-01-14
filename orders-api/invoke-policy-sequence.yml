@@ -14,13 +14,13 @@ spec:
       target:
         timeout: 30
         url: >-
-          https://sample-api.v12-preview.apiconnect.test.automation.ibm.com/orders/order/123
-        tlsClientProfile: tls-client-profile-catalog-default
-        urlType: plain
+          'http://sample-api.apic-sample.svc.cluster.local:12345/orders/order/'
+          & $pathParameter(orderNumber) 
+        urlType: jsonata
       verb: GET
   cache:
     expire:
-      static:
-        seconds: 0
+      fromCacheControl:
+        messageName: ''
     scope:
       narrowScope: {}
