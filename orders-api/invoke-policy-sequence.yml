@@ -14,8 +14,8 @@ spec:
       target:
         timeout: 30
         url: >-
-          'http://sample-api.apic-sample.svc.cluster.local:12345/orders/order/'
-          & $pathParameter(orderNumber) 
+          "http://sample-api.apic-sample.svc.cluster.local:12345/orders/order/"
+          & $pathParameter("orderNumber")
         urlType: jsonata
       verb: GET
   cache:

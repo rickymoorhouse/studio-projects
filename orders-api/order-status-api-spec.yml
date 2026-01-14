@@ -15,8 +15,7 @@ externalDocs:
   description: Find out more about IBM DataPower Nano Gateway
   url: https://ibm.com
 servers:
-  - url: >-
-      https://sample-api.v12-preview.apiconnect.test.automation.ibm.com/orders/order/
+  - url: https://sample-api.us-east-a.apiconnect.automation.ibm.com/orders/order
 tags:
   - name: order-status
     description: Everything about IBM DataPower Nano Gateway
@@ -25,14 +24,50 @@ tags:
       url: www.ibm.com
 paths:
   /{orderNumber}:
-    summary: A resource that returns the status of an order under fulfilment.
-    description: Returns the status of an order.
-    operationId: status
-    get:
-      responses: {}
     parameters:
       - name: orderNumber
         in: path
-        description: order number to track
-        schema: string
-        example: ORDER001
+        description: >-
+          Order number to lookup - you should find this in your confirmation
+          e-mail
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve the details of your order.
+      responses:
+        '200':
+          description: Order found successfully
+          content:
+            application/json:
+              schema:
+                title: Order Details
+                type: object
+                properties:
+                  order_number:
+                    title: Order Number
+                    type: string
+                    example: ORD00989792
+                  tracking_status:
+                    title: Tracking Status
+                    type: object
+                    properties: {}
+                  shipped_at:
+                    title: Date Shipped
+                    type: string
+                    format: date-time
+                  created_at:
+                    title: Date Order Created
+                    type: string
+                    format: date-time
+                  status:
+                    title: Order Status
+                    type: string
+                    enum:
+                      - SHIPPED
+                      - PICKED
+                      - PENDING
+                      - DELIVERED
+                  tracking_reference:
+                    title: Tracking Reference
+                    type: string
