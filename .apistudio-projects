@@ -1,5 +1,6 @@
 projects:
   orders-api:
     description: NanoGW - Sample Orders API
-    tags: []
-    lastUpdated: 1768496593579
+    tags:
+      - nanogw
+    lastUpdated: 1768557945771
