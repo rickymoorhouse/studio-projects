@@ -9,6 +9,6 @@ metadata:
     gatewayTypes:
       - nano
 spec:
-  condition: $body(order.delivery_method) = "UPS"
+  condition: $body("order").delivery_method = "UPS"
   execute:
-    - $ref: orders-api:Invoke-a89fi9:1.0
+    - $ref: orders-api:invoke-tracking:1.0
