@@ -4,7 +4,7 @@ info:
   description: A service that returns the status of an order under fulfilment.
   termsOfService: https://ibm.com/terms/
   contact:
-    name: Aaron Lieber
+    name: Ricky Moorhouse
     url: www.ibm.com
     email: api-connect@ibm.com
   license:

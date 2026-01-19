@@ -24,3 +24,4 @@ spec:
         messageName: ''
     scope:
       narrowScope: {}
+  output: order
