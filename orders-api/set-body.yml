@@ -15,4 +15,4 @@ spec:
     value: >-
       {"orderNumber":$pathParameter("orderNumber"), "shipper":
       $body("order").delivery_method, "reference":
-      $body("order").tracking_reference,"test":1}
+      $body("order").tracking_reference}

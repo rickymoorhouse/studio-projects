@@ -1,7 +1,7 @@
 kind: Set
 apiVersion: api.ibm.com/v1
 metadata:
-  name: Set-d4350o
+  name: set-response
   namespace: orders-api
   version: '1.0'
   tags: []

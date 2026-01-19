@@ -1,7 +1,7 @@
 kind: Invoke
 apiVersion: api.ibm.com/v1
 metadata:
-  name: invoke-policy-sequence
+  name: invoke-order-system
   namespace: orders-api
   version: '1.0'
   tags: []

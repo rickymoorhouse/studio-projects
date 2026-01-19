@@ -1,7 +1,7 @@
 kind: Parse
 apiVersion: api.ibm.com/v1
 metadata:
-  name: Parse-g86cjx
+  name: parse-tracking
   namespace: orders-api
   version: '1.0'
   tags: []
