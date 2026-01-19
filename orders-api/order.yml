@@ -1,0 +1,18 @@
+kind: Product
+apiVersion: api.ibm.com/v1
+metadata:
+  name: order
+  namespace: orders-api
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  apis:
+    - $ref: orders-api:order-status-api:1
+  plans:
+    - $ref: orders-api:default:1.0
+  extensions:
+    dp-nano-gateway:
+      spec:
+        logLevel:
+          all: debug

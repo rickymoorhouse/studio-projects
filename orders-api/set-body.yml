@@ -1,0 +1,18 @@
+kind: Set
+apiVersion: api.ibm.com/v1
+metadata:
+  name: set-body
+  namespace: orders-api
+  version: '1.0'
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  valueType: jsonata
+  messageBody:
+    messageName: lambda_input
+    value: >-
+      {"orderNumber":$pathParameter("orderNumber"), "shipper":
+      $body("order").delivery_method, "reference":
+      $body("order").tracking_reference,"test":1}

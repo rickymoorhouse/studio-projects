@@ -1,0 +1,21 @@
+kind: Set
+apiVersion: api.ibm.com/v1
+metadata:
+  name: Set-d4350o
+  namespace: orders-api
+  version: '1.0'
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  valueType: jsonata
+  messageBody:
+    messageName: response
+    value: >-
+      {"order_number":$pathParameter("orderNumber"),
+      "status":$body("tracking").trackResponse.shipment.package.activity.status,
+      "shipped_at": $body("order").shipped_at,
+      "tracking_reference":$body("order").tracking_reference,
+      "order_status":$body("order").status,
+      "created_at":$body("order").created_at}

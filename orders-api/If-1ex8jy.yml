@@ -1,0 +1,14 @@
+kind: If
+apiVersion: api.ibm.com/v1
+metadata:
+  name: If-1ex8jy
+  namespace: orders-api
+  version: '1.0'
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  condition: $body(order.delivery_method) = "UPS"
+  execute:
+    - $ref: orders-api:Invoke-a89fi9:1.0
