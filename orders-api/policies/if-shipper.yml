@@ -1,7 +1,7 @@
 kind: If
 apiVersion: api.ibm.com/v1
 metadata:
-  name: If-1ex8jy
+  name: ip-shipper
   namespace: orders-api
   version: '1.0'
   tags: []
@@ -11,4 +11,6 @@ metadata:
 spec:
   condition: $body("order").delivery_method = "UPS"
   execute:
-    - $ref: orders-api:invoke-tracking:1.0
+    - $ref: orders-api:invoke-tracking:1.0   
+    - $ref: orders-api:parse-tracking:1.0
+    - $ref: orders-api:set-response:1.0
