@@ -74,9 +74,15 @@ paths:
 components:
   securitySchemes:
     clientId:
-      name: 'X-IBM-Client-Id'
+      name: X-IBM-Client-Id
+      in: header
+      description: ''
+      type: apiKey
+    clientSecret:
+      name: X-IBM-Client-Secret
       in: header
       description: ''
       type: apiKey
 security:
   - clientId: []
+    clientSecret: []
