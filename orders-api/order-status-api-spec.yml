@@ -71,3 +71,12 @@ paths:
                   tracking_reference:
                     title: Tracking Reference
                     type: string
+components:
+  securitySchemes:
+    clientId:
+      name: 'X-IBM-Client-Id'
+      in: header
+      description: ''
+      type: apiKey
+security:
+  - clientId: []

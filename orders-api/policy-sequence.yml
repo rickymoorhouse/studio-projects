@@ -10,6 +10,9 @@ metadata:
       - nano
 spec:
   main:
+    - $ref: orders-api:extract-identity:1.0
+    - $ref: orders-api:authenticate:1.0
+    - $ref: orders-api:authorize:1.0
     - $ref: orders-api:invoke-order-system:1.0
     - $ref: orders-api:parse-order-details:1.0
     - $ref: orders-api:set-body:1.0
