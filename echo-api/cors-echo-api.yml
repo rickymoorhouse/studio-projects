@@ -1,0 +1,18 @@
+kind: CORS
+apiVersion: api.ibm.com/v1
+metadata:
+  name: cors-echo-api
+  namespace: echo-api
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  rules:
+    - action: allow
+      originList:
+        - '*'
+      allowCredentials: false
+      exposeHeaders:
+        predefined: false
+        custom: ''
+        backend: false
