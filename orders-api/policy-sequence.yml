@@ -11,10 +11,3 @@ metadata:
 spec:
   main:
     - $ref: orders-api:invoke-order-system:1.0
-    - $ref: orders-api:parse-order-details:1.0
-    - $ref: orders-api:set-body:1.0
-    - $ref: orders-api:invoke-tracking:1.0
-    - $ref: orders-api:parse-tracking:1.0
-    - $ref: orders-api:set-response:1.0
-
-    
